@@ -1,3 +1,6 @@
+@use "mixins";
+
+
 @font-face {
   font-family: "Hylia Serif";
   src: url("/assets/fonts/HYLIASERIFBETA-REGULAR.OTF");
@@ -30,4 +33,12 @@
 .calamity-bold {
   font-family: "Calamity";
   font-weight: bold;
+}
+
+.center {
+  @include center;
+}
+
+.glow-blue {
+  @include glow(#adffff, #30464f);
 }
