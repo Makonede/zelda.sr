@@ -31,20 +31,22 @@
 
 .center {
   position: absolute;
+  margin: 0;
+  text-align: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .glow-blue {
-  color: #adffff;
+  color: #a9fdfd;
   animation: glow 1s ease-in-out infinite alternate;
 }
 @keyframes glow {
   from {
-    text-shadow: 0 0 10px #adffff, 0 0 20px #adffff, 0 0 30px #608d9f, 0 0 40px #608d9f, 0 0 50px #608d9f, 0 0 60px #608d9f, 0 0 70px #608d9f;
+    text-shadow: 0 0 10px #a9fdfd, 0 0 20px #a9fdfd, 0 0 30px #469cb9, 0 0 40px #469cb9, 0 0 50px #469cb9, 0 0 60px #469cb9, 0 0 70px #469cb9;
   }
   to {
-    text-shadow: 0 0 20px #adffff, 0 0 30px #30464f, 0 0 40px #30464f, 0 0 50px #30464f, 0 0 60px #30464f, 0 0 70px #30464f, 0 0 80px #30464f;
+    text-shadow: 0 0 20px #a9fdfd, 0 0 30px #16313a, 0 0 40px #16313a, 0 0 50px #16313a, 0 0 60px #16313a, 0 0 70px #16313a, 0 0 80px #16313a;
   }
 }
