@@ -2,18 +2,15 @@
   font-family: "Hylia Serif";
   src: url("/fonts/HYLIASERIFBETA-REGULAR.OTF");
 }
-
 @font-face {
   font-family: "Calamity";
   src: url("/fonts/CALAMITY-REGULAR.OTF");
 }
-
 @font-face {
   font-family: "Calamity";
   src: url("/fonts/CALAMITY-BOLD.OTF");
   font-weight: bold;
 }
-
 .hylia {
   font-family: "Hylia Serif";
 }
@@ -31,3 +28,5 @@
   font-family: "Calamity";
   font-weight: bold;
 }
+
+/*# sourceMappingURL=main.css.map */
