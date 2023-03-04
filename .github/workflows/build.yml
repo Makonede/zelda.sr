@@ -35,7 +35,7 @@ jobs:
       run: |2
         tar -xzf dart-sass-*-linux-x64.tar.gz
         rm -rf dart-sass-*.tar.gz
-        echo dart-sass-* >> $GITHUB_PATH
+        tee -a $GITHUB_PATH <<< dart-sass-*
 
     - name: Compile Sass
       run: "sass repo/sass:build"
