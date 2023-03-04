@@ -38,14 +38,17 @@ jobs:
         echo dart-sass >> $GITHUB_PATH
 
     - name: Compile Sass
-      run: "sass repo/sass:build"
+      run: "sass repo/sass/:build/css/"
 
     - name: Copy HTML
       run: "cp -rf repo/html/* build/"
 
+    - name: Copy fonts
+      run: "cp -rf repo/fonts/ build/assets/"
+
     - name: Push
       run: |2
-        cd repo
+        cd build
         git config user.name github-actions
         git config user.email github-actions@github.com
         git add -A
