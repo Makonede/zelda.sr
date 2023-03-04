@@ -38,7 +38,7 @@ jobs:
         echo dart-sass >> $GITHUB_PATH
 
     - name: Compile Sass
-      run: "sass repo/sass/:build/css/"
+      run: "sass --no-source-map repo/sass/:build/css/"
 
     - name: Copy HTML
       run: "cp -rf repo/html/* build/"
