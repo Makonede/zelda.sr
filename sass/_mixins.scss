@@ -12,8 +12,13 @@
 
 
 @mixin glow($color, $glow-color) {
-  $glow-color-1: color.change($glow-color, $lightness: 80%);
-  $glow-color-2: color.change($glow-color, $lightness: 50%);
+  $glow-color-lightness: color.lightness($glow-color);
+  $glow-color-1: color.change(
+    $glow-color, $lightness: $glow-color-lightness * 80%
+  );
+  $glow-color-2: color.change(
+    $glow-color, $lightness: $glow-color-lightness * 50%
+  );
 
   @keyframes glow {
     from {
