@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Hylia Serif";
+  src: url("/assets/fonts/HYLIASERIFBETA-REGULAR.OTF");
+}
+@font-face {
+  font-family: "Calamity";
+  src: url("/assets/fonts/CALAMITY-REGULAR.OTF");
+}
+@font-face {
+  font-family: "Calamity";
+  src: url("/assets/fonts/CALAMITY-BOLD.OTF");
+  font-weight: bold;
+}
+.hylia {
+  font-family: "Hylia Serif";
+}
+
+.hylia-bold {
+  font-family: "Hylia Serif";
+  font-weight: bold;
+}
+
+.calamity {
+  font-family: "Calamity";
+}
+
+.calamity-bold {
+  font-family: "Calamity";
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=main.css.map */
