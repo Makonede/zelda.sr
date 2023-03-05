@@ -1,4 +1,5 @@
 @use "sass:color";
+@use "sass:string";
 
 
 @mixin center {
@@ -19,7 +20,9 @@
     $glow-color, $lightness: $glow-color-lightness * 0.5
   );
 
-  @keyframes glow {
+  $animation-id: string.unique-id();
+
+  @keyframes #{$animation-id} {
     from {
       text-shadow: 0 0 10px $color, 0 0 20px $color, 0 0 30px $glow-color-2,
         0 0 40px $glow-color-2;
@@ -31,5 +34,5 @@
   }
 
   color: $color;
-  animation: glow 1s ease-in-out infinite alternate;
+  animation: $animation-id 1s ease-in-out infinite alternate;
 }
