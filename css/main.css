@@ -2,6 +2,19 @@
   background-color: black;
 }
 
+.glow-red {
+  color: #fc2c00;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fc2c00, 0 0 20px #fc2c00, 0 0 30px #210401, 0 0 40px #210401;
+  }
+  to {
+    text-shadow: 0 0 20px #fc2c00, 0 0 30px #350602;
+  }
+}
+
 .glow-blue {
   color: #00def7;
   animation: glow 1s ease-in-out infinite alternate;
