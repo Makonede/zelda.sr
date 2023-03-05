@@ -10,7 +10,6 @@
   transform: translate(-50%, -50%);
 }
 
-
 @mixin glow($color, $glow-color) {
   $glow-color-lightness: color.lightness($glow-color);
   $glow-color-1: color.change(
@@ -23,13 +22,11 @@
   @keyframes glow {
     from {
       text-shadow: 0 0 10px $color, 0 0 20px $color, 0 0 30px $glow-color-2,
-        0 0 40px $glow-color-2, 0 0 50px $glow-color-2, 0 0 60px $glow-color-2,
-        0 0 70px $glow-color-2;
+        0 0 40px $glow-color-2;
     }
     
     to {
-      text-shadow: 0 0 20px $color, 0 0 30px $glow-color-1,
-        0 0 40px $glow-color-1, 0 0 50px $glow-color-1, 0 0 60px $glow-color-1;
+      text-shadow: 0 0 20px $color, 0 0 30px $glow-color-1;
     }
   }
 
