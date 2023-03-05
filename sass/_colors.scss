@@ -1,0 +1,10 @@
+@use "mixins" as *;
+
+
+.black {
+  background-color: black;
+}
+
+.glow-blue {
+  @include glow(#00def7, #16313a);
+}

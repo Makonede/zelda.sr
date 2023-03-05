@@ -34,11 +34,3 @@
   font-family: "Calamity";
   font-weight: bold;
 }
-
-.center {
-  @include center;
-}
-
-.glow-blue {
-  @include glow(#00def7, #16313a);
-}
