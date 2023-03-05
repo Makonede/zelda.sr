@@ -14,10 +14,10 @@
 @mixin glow($color, $glow-color) {
   $glow-color-lightness: color.lightness($glow-color);
   $glow-color-1: color.change(
-    $glow-color, $lightness: $glow-color-lightness * 80%
+    $glow-color, $lightness: $glow-color-lightness * 0.8
   );
   $glow-color-2: color.change(
-    $glow-color, $lightness: $glow-color-lightness * 50%
+    $glow-color, $lightness: $glow-color-lightness * 0.5
   );
 
   @keyframes glow {
