@@ -40,11 +40,11 @@ jobs:
     - name: Compile Sass
       run: "sass --no-source-map repo/sass/:build/css/"
 
-    - name: Copy HTML
-      run: "cp -rf repo/html/* build/"
-
-    - name: Copy fonts
-      run: "cp -rf repo/fonts/ build/assets/"
+    - name: Copy files
+      run: |2
+        cp -rf repo/html/* build/
+        cp -rf repo/fonts/ build/assets/
+        cp -rf repo/images/ build/assets/
 
     - name: Push
       run: |2
