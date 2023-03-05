@@ -4,9 +4,9 @@
 
 .glow-red {
   color: #fc2c00;
-  animation: uhiad1j 1s ease-in-out infinite alternate;
+  animation: glow-uub9ejr 1s ease-in-out infinite alternate;
 }
-@keyframes uhiad1j {
+@keyframes glow-uub9ejr {
   from {
     text-shadow: 0 0 10px #fc2c00, 0 0 20px #fc2c00, 0 0 30px #210401, 0 0 40px #210401;
   }
@@ -17,9 +17,9 @@
 
 .glow-blue {
   color: #00def7;
-  animation: uhiad1s 1s ease-in-out infinite alternate;
+  animation: glow-uub9ekc 1s ease-in-out infinite alternate;
 }
-@keyframes uhiad1s {
+@keyframes glow-uub9ekc {
   from {
     text-shadow: 0 0 10px #00def7, 0 0 20px #00def7, 0 0 30px #0b191d, 0 0 40px #0b191d;
   }
