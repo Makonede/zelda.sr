@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 @use "sass:color";
 @use "sass:string";
 
@@ -20,7 +22,7 @@
     $glow-color, $lightness: $glow-color-lightness * 0.5
   );
 
-  $animation-id: string.unique-id();
+  $animation-id: glow-#{string.unique-id()};
 
   @keyframes #{$animation-id} {
     from {
