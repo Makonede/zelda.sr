@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
@@ -57,3 +60,4 @@ jobs:
           git commit -am "Build"
           git push
         fi
+      if: ${{ github.event_name == 'pull_request' }}
