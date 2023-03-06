@@ -37,9 +37,14 @@ jobs:
         rm -rf dart-sass-*.tar.gz
         echo dart-sass >> $GITHUB_PATH
 
+    - name: Prepare build directory
+      run: |2
+        rm -rf build/*
+        mkdir -p build/
+        echo zelda.sr > build/CNAME
+
     - name: Compile Sass
       run: |2
-        rm -rf build/css/*
         sass --no-source-map repo/sass/:build/css/
 
     - name: Copy files
