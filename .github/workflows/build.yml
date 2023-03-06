@@ -40,7 +40,9 @@ jobs:
     - name: Prepare build directory
       run: |2
         rm -rf build/*
-        mkdir -p build/
+        mkdir -p build/assets/fonts/
+        mkdir build/assets/images/
+        mkdir build/css/
         echo zelda.sr > build/CNAME
 
     - name: Compile Sass
@@ -49,8 +51,6 @@ jobs:
 
     - name: Copy files
       run: |2
-        rm -rf build/*.html
-        rm -rf build/assets/*
         cp -rf repo/html/* build/
         cp -rf repo/fonts/ build/assets/
         cp -rf repo/images/ build/assets/
