@@ -40,17 +40,18 @@ jobs:
       run: |2
         shopt -s extglob
         rm -rf build/!(.git/)
-        mkdir build/assets/
+        mkdir -p build/assets/fonts/
+        mkdir build/assets/images/
         mkdir build/css/
-        mkdir build/src/
+        mkdir -p build/src/sass/
         echo -n zelda.sr > build/CNAME
 
     - name: Copy files
       run: |2
-        cp -rf repo/sass/ build/src/
-        cp -rf repo/html/* build/
-        cp -rf repo/fonts/ build/assets/
-        cp -rf repo/images/ build/assets/
+        cp -rf repo/sass/!(.gitignore) build/src/sass/
+        cp -rf repo/html/!(.gitignore) build/
+        cp -rf repo/fonts/!(.gitignore) build/assets/fonts/
+        cp -rf repo/images/!(.gitignore) build/assets/images/
 
     - name: Compile Sass
       run: |2
