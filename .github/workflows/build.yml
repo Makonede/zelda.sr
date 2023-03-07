@@ -39,6 +39,7 @@ jobs:
 
     - name: Prepare build directory
       run: |2
+        shopt -s extglob
         rm -rf build/!(.git/)
         mkdir -p build/assets/fonts/
         mkdir build/assets/images/
@@ -46,8 +47,7 @@ jobs:
         echo zelda.sr > build/CNAME
 
     - name: Compile Sass
-      run: |2
-        sass --no-source-map repo/sass/:build/css/
+      run: "sass --no-source-map repo/sass/:build/css/"
 
     - name: Copy files
       run: |2
