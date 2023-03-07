@@ -33,9 +33,9 @@ jobs:
 
     - name: Install Dart Sass
       run: |2
-        tar -xzf dart-sass-*.tar.gz
+        tar -xvzf dart-sass-*.tar.gz -C .local/bin/
         rm -rf dart-sass-*.tar.gz
-        echo dart-sass >> $GITHUB_PATH
+        echo $HOME/.local/bin/dart-sass >> $GITHUB_PATH
 
     - name: Prepare build directory
       run: |2
