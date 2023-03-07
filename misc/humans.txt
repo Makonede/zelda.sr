@@ -1,0 +1,8 @@
+/* TEAM */
+Creator: Makonede
+Discord: Makonede#0001
+
+/* SITE */
+Last update: 2023/03/07
+Standards: HTML5, CSS3, ES2022
+Software: Visual Studio Code, Github Desktop, Adobe Illustrator
