@@ -33,6 +33,7 @@ jobs:
 
     - name: Install Dart Sass
       run: |2
+        mkdir -p .local/bin/
         tar -xvzf dart-sass-*.tar.gz -C .local/bin/
         rm -rf dart-sass-*.tar.gz
         echo $HOME/.local/bin/dart-sass >> $GITHUB_PATH
