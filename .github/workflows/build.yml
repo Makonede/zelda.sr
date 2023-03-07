@@ -44,7 +44,7 @@ jobs:
         mkdir -p build/assets/fonts/
         mkdir build/assets/images/
         mkdir build/css/
-        echo zelda.sr > build/CNAME
+        echo -n zelda.sr > build/CNAME
 
     - name: Compile Sass
       run: "sass --no-source-map repo/sass/:build/css/"
