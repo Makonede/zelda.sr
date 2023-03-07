@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+@use "mixins" as *;
+
+
+.black {
+  background-color: black;
+}
+
+.glow-red {
+  @include glow(#fc2c00, #420702);
+}
+
+.glow-blue {
+  @include glow(#00def7, #16313a);
+}

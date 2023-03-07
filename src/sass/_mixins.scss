@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+@use "sass:color";
+@use "sass:string";
+
+
+@mixin center {
+  position: absolute;
+  margin: 0;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin glow($color, $glow-color) {
+  $glow-color-lightness: color.lightness($glow-color);
+  $glow-color-1: color.change(
+    $glow-color, $lightness: $glow-color-lightness * 0.8
+  );
+  $glow-color-2: color.change(
+    $glow-color, $lightness: $glow-color-lightness * 0.5
+  );
+
+  $animation-id: glow-#{string.unique-id()};
+
+  @keyframes #{$animation-id} {
+    from {
+      text-shadow: 0 0 10px $color, 0 0 20px $color, 0 0 30px $glow-color-2,
+        0 0 40px $glow-color-2;
+    }
+    
+    to {
+      text-shadow: 0 0 20px $color, 0 0 30px $glow-color-1;
+    }
+  }
+
+  color: $color;
+  animation: $animation-id 1s ease-in-out infinite alternate;
+}
