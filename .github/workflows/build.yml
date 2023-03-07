@@ -48,10 +48,11 @@ jobs:
     - name: Copy files
       run: |2
         shopt -s extglob
-        cp -rf repo/sass/!(.gitignore) build/src/sass/
         cp -rf repo/html/!(.gitignore) build/
+        cp -rf repo/sass/!(.gitignore) build/src/sass/
         cp -rf repo/fonts/!(.gitignore) build/assets/fonts/
         cp -rf repo/images/!(.gitignore) build/assets/images/
+        cp -rf repo/misc/!(.gitignore) build/
 
     - name: Compile Sass
       run: |2
