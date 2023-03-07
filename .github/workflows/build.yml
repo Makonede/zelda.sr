@@ -41,23 +41,25 @@ jobs:
       run: |2
         shopt -s extglob
         rm -rf build/!(.git/)
-        mkdir -p build/assets/fonts/
-        mkdir build/assets/images/
+        mkdir build/assets/
         mkdir build/css/
+        mkdir build/src/
         echo -n zelda.sr > build/CNAME
-
-    - name: Compile Sass
-      run: "sass --no-source-map repo/sass/:build/css/"
 
     - name: Copy files
       run: |2
+        cp -rf repo/sass/ build/src/
         cp -rf repo/html/* build/
         cp -rf repo/fonts/ build/assets/
         cp -rf repo/images/ build/assets/
 
+    - name: Compile Sass
+      run: |2
+        cd build/
+        sass src/sass/:css/
+
     - name: Push
       run: |2
-        cd build
         git config user.name github-actions
         git config user.email github-actions@github.com
         git add -A
