@@ -39,12 +39,11 @@ jobs:
     - name: Prepare build directory
       run: |2
         shopt -s extglob
-        rm -rf build/!(.git/)
+        rm -rf build/!(.*|CNAME)
         mkdir -p build/assets/fonts/
         mkdir build/assets/images/
         mkdir build/css/
         mkdir -p build/src/sass/
-        echo -n zelda.sr > build/CNAME
 
     - name: Copy files
       run: |2
