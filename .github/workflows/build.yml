@@ -39,7 +39,7 @@ jobs:
 
     - name: Prepare build directory
       run: |2
-        rm -rf build/*
+        rm -rf build/!(.git/)
         mkdir -p build/assets/fonts/
         mkdir build/assets/images/
         mkdir build/css/
@@ -65,4 +65,4 @@ jobs:
           git commit -am "Build"
           git push
         fi
-      if: ${{ github.event_name == 'pull_request' }}
+      if: ${{ github.event_name == 'push' }}
