@@ -59,6 +59,7 @@ jobs:
 
     - name: Push
       run: |2
+        cd build/
         git config user.name github-actions
         git config user.email github-actions@github.com
         git add -A
