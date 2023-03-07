@@ -33,7 +33,7 @@ jobs:
 
     - name: Install Dart Sass
       run: |2
-        tar -xzf dart-sass-*-linux-x64.tar.gz
+        tar -xzf dart-sass-*.tar.gz
         rm -rf dart-sass-*.tar.gz
         echo dart-sass >> $GITHUB_PATH
 
